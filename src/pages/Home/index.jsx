@@ -1,15 +1,18 @@
-import logo from './logo.svg';
+import logo from '../../logo.svg';
 import './Home.css';
+import React from 'react';
 
-function Home() {
+class Home extends React.Component {
+  render() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+    <div className="Home">
+ 
+        <img src={logo} className="Home-logo" alt="logo" />
         <p>Patience ça vient!</p>
-      </header>
-    </div>
+      </div>
+  
   );
+}
 }
 
 export default Home;
