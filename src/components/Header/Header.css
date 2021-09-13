@@ -1,20 +1,23 @@
-header{
-    width: 86vw;
-    display: flex;
-    justify-content: space-between;
- margin-left: auto;
-    margin-right: auto;
-
+header {
+  width: 86vw;
+  display: flex;
+  justify-content: space-between;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 3vh;
+  padding-bottom: 4vh;
 }
-.nav-Header{
-    color: #FF6060;
-font-size: 24px;
-font-weight: 500;
-    width: 21.5vw;
-    display: flex;
-     justify-content: space-around;
-
+.nav-Header {
+  font-weight: 500;
+  width: 21.5vw;
+  display: flex;
+  justify-content: space-around;
 }
-.logo-Header{
-    width: 14,6vw;
+.links {
+  color: #ff6060;
+  font-size: 24px;
+  text-decoration: none;
+}
+.logo-Header {
+  width: 14, 6vw;
 }
