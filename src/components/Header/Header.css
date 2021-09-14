@@ -21,3 +21,6 @@ header {
 .logo-Header {
   width: 14, 6vw;
 }
+.selected {
+  text-decoration: underline;
+}

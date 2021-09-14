@@ -5,7 +5,7 @@ import "./index.css"
 import Home from "./pages/Home"
 import About from "./pages/About"
 //import Houses from "./pages/Houses"
-//import Error from "./pages/Error"
+import Error from "./pages/Error"
 import reportWebVitals from "./reportWebVitals"
 import Header from "./components/Header"
 import Footer from "./components/Footer"
@@ -30,10 +30,10 @@ ReactDOM.render(
       </Route>
       {/*<Route path="/houses*">
         <Houses />
-      </Route>
-      <Route path="/erreur">
-        <Error />
       </Route>*/}
+      <Route>
+        <Error />
+      </Route>
     </Switch>
     <Footer />
   </Router>,

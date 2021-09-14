@@ -1,14 +1,20 @@
-import logo from "../../assets/logo.svg"
-import "./Home.css"
 import React from "react"
+import "./Home.css"
+import BannerHome from "../../assets/banner-Home.jpg"
+import Banner from "../../components/Banner"
 
 class Home extends React.Component {
   render() {
     return (
-      <div className="Home">
-        <img src={logo} className="Home-logo" alt="logo" />
+      <main className="Home">
+        <Banner
+          imgSrc={BannerHome}
+          altTxt="paysage terre et mer"
+          title="Chez vous, partout et ailleurs"
+        />
+
         <p>Patience ça vient!</p>
-      </div>
+      </main>
     )
   }
 }

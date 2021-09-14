@@ -1,14 +1,16 @@
-import logo from "../../assets/logo.svg"
 import "./About.css"
 import React from "react"
+import BannerAbout from "../../assets/banner-About.jpg"
+import Banner from "../../components/Banner"
 
 class About extends React.Component {
   render() {
     return (
-      <div className="Home">
-        <img src={logo} className="Home-logo" alt="logo" />
-        <p>Ici il y aura une bannière montagne et 4 collapses</p>
-      </div>
+      <main className="About">
+        <Banner imgSrc={BannerAbout} altTxt="paysage montagne" />
+
+        <p>4 collapses seront bientôt là!</p>
+      </main>
     )
   }
 }
