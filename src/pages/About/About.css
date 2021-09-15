@@ -1,6 +1,10 @@
-.About p {
-  color: red;
-  font-size: 4rem;
-
-  text-align: center;
+.collapses-about {
+  width: 85%;
+  margin: auto;
+}
+.collapses-about .collapse-title {
+  margin-top: 2rem;
+}
+.collapses-about p {
+  margin: auto;
 }

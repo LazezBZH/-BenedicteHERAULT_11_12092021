@@ -1,0 +1,33 @@
+.collapse {
+  position: relative;
+}
+.collapse-title {
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+  padding: 0 2rem;
+  background-color: #ff6060;
+  border-radius: 0.5rem;
+}
+.collapse-title h2 {
+  color: white;
+  font-size: 24px;
+  font-weight: 500;
+}
+.collapse-title i {
+  color: white;
+  line-height: 2.5;
+  font-size: 24px;
+}
+.collapse p {
+  background-color: #f6f6f6;
+  padding: 2rem;
+}
+.collapse-content_closed {
+  display: none;
+}
+.collapse-content_open {
+  position: relative;
+  top: -1rem;
+  z-index: -1;
+}

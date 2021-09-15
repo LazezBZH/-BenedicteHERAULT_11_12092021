@@ -1,17 +1,16 @@
 header {
-  width: 86vw;
+  max-width: 1440px;
   display: flex;
   justify-content: space-between;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 3vh;
-  padding-bottom: 4vh;
+  margin: 3% auto;
+  padding: 0 8%;
 }
 .nav-Header {
   font-weight: 500;
-  width: 21.5vw;
+  width: 25%;
   display: flex;
   justify-content: space-around;
+  line-height: 4rem;
 }
 .links {
   color: #ff6060;
