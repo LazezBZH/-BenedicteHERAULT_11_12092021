@@ -10,14 +10,6 @@ import reportWebVitals from "./reportWebVitals"
 import Header from "./components/Header"
 import Footer from "./components/Footer"
 
-/*ReactDOM.render(
-  <React.StrictMode>
-    <Header />
-    <Home />
-  </React.StrictMode>,
-  document.getElementById("root")
-)*/
-
 ReactDOM.render(
   <Router>
     <Header />

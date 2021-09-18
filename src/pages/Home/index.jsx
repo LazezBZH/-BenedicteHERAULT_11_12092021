@@ -2,8 +2,9 @@ import React from "react"
 import "./Home.css"
 import BannerHome from "../../assets/banner-Home.jpg"
 import Banner from "../../components/Banner"
+import Galery from "../../components/Galery"
 
-class Home extends React.Component {
+export default class Home extends React.Component {
   render() {
     return (
       <main className="Home">
@@ -12,11 +13,8 @@ class Home extends React.Component {
           altTxt="paysage terre et mer"
           title="Chez vous, partout et ailleurs"
         />
-
-        <p>Patience ça vient!</p>
+        <Galery />
       </main>
     )
   }
 }
-
-export default Home

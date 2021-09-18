@@ -5,7 +5,7 @@ import Banner from "../../components/Banner"
 import { aboutText } from "../../datas/about-datas"
 import Collapse from "../../components/Collapse"
 
-class About extends React.Component {
+export default class About extends React.Component {
   render() {
     return (
       <main className="About">
@@ -19,5 +19,3 @@ class About extends React.Component {
     )
   }
 }
-
-export default About

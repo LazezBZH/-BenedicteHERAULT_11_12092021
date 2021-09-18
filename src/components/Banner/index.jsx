@@ -17,7 +17,7 @@ class Banner extends React.Component {
 Banner.propTypes = {
   imgSrc: PropTypes.string.isRequired,
   altTxt: PropTypes.string.isRequired,
-  title: PropTypes.string.isRequired,
+  title: PropTypes.string,
 }
 
 export default Banner

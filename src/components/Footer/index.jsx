@@ -1,7 +1,8 @@
 import React from "react"
 import "./Footer.css"
 import logo from "../../assets/logo-footer.svg"
-class Footer extends React.Component {
+
+export default class Footer extends React.Component {
   render() {
     return (
       <footer>
@@ -9,10 +10,8 @@ class Footer extends React.Component {
           <img src={logo} alt="logo de Kasa" />
         </p>
 
-        <p className="copyright">© 2020 Kasa. All rights reserved</p>
+        <p className="copyright">© 2021 Kasa. All rights reserved</p>
       </footer>
     )
   }
 }
-
-export default Footer

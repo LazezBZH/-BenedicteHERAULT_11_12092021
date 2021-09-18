@@ -3,7 +3,7 @@ import { Link } from "react-router-dom"
 
 import "./Error.css"
 
-class Error extends React.Component {
+export default class Error extends React.Component {
   render() {
     return (
       <main className="Error">
@@ -20,5 +20,3 @@ class Error extends React.Component {
     )
   }
 }
-
-export default Error

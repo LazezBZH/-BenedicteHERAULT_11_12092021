@@ -42,7 +42,7 @@ class Collapse extends React.Component {
 
 Collapse.propTypes = {
   title: PropTypes.string.isRequired,
-  text: PropTypes.oneOfType([
+  content: PropTypes.oneOfType([
     PropTypes.string,
     PropTypes.arrayOf(PropTypes.string),
   ]).isRequired,
