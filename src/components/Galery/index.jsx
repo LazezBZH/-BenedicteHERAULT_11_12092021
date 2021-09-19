@@ -1,6 +1,6 @@
 import React from "react"
 import "./Galery.css"
-
+import Thumb from "../Thumb"
 export default class Galery extends React.Component {
   constructor(props) {
     super(props)
@@ -24,14 +24,13 @@ export default class Galery extends React.Component {
     return (
       <section className="galery">
         {datas.map((item) => (
-          <article key={`thumb-${item.id}`} className="thumb">
-            <img
-              className="cover-Thumb"
+          <article key={`thumb-${item.id}`} className="thumbs">
+            <Thumb
+              title={item.title}
               src={item.cover}
-              alt={`${item.title} situé en ${item.location}`}
+              id={item.id}
+              location={item.location}
             />
-            <div className="filter"></div>
-            <h2 className="title-Thumb">{item.title}</h2>
           </article>
         ))}
       </section>

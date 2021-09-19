@@ -1,0 +1,30 @@
+.thumb {
+  width: 24vw;
+  overflow: hidden;
+  position: relative;
+  padding: 1rem;
+}
+.thumb img {
+  width: 100%;
+  height: 24vw;
+  border-radius: 0.5rem;
+}
+.filter {
+  width: 24vw;
+  height: 24vw;
+  position: absolute;
+  top: 1rem;
+  border-radius: 0.5rem;
+  background: linear-gradient(rgba(7, 7, 7, 0), rgba(7, 7, 7, 0.3));
+}
+
+.title-Thumb {
+  width: 85%;
+  position: absolute;
+  bottom: 1rem;
+  left: 2rem;
+  z-index: 2;
+  color: white;
+  font-size: 24px;
+  font-weight: 500;
+}

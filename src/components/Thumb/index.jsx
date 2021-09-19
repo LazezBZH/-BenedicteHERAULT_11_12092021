@@ -1,17 +1,26 @@
 import { Component } from "react"
+import PropTypes from "prop-types"
 import "./Thumb.css"
 
-export class Thumb extends Component {
+export default class Thumb extends Component {
   render() {
-    const { title, cover, location } = this.props
-
+    const { title, src, location } = this.props
     return (
-      <article className="cover-Thumb">
-        <img cover={cover} alt={`${title} situé en ${location}`} />
-
+      <div className="thumb">
+        <img
+          className="cover-Thumb"
+          src={src}
+          alt={`${title} en ${location}`}
+        />
+        <div className="filter"></div>
         <h2 className="title-Thumb">{title}</h2>
-      </article>
+      </div>
     )
   }
 }
-//non utilisé pour l'instant
+
+Thumb.propTypes = {
+  src: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  location: PropTypes.string.isRequired,
+}
