@@ -1,19 +1,22 @@
 import { Component } from "react"
 import PropTypes from "prop-types"
+import { Link } from "react-router-dom"
 import "./Thumb.css"
 
 export default class Thumb extends Component {
   render() {
-    const { title, src, location } = this.props
+    const { title, src, location, id } = this.props
     return (
       <div className="thumb">
-        <img
-          className="cover-Thumb"
-          src={src}
-          alt={`${title} en ${location}`}
-        />
-        <div className="filter"></div>
-        <h2 className="title-Thumb">{title}</h2>
+        <Link to={`/house/${id}`} title={title} className="link-Thumb">
+          <img
+            className="cover-Thumb"
+            src={src}
+            alt={`${title} en ${location}`}
+          />
+          <div className="filter"></div>
+          <h2 className="title-Thumb">{title}</h2>
+        </Link>
       </div>
     )
   }

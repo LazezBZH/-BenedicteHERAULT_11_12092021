@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
 import "./index.css"
 import Home from "./pages/Home"
 import About from "./pages/About"
-//import Houses from "./pages/Houses"
+import Houses from "./pages/Houses"
 import Error from "./pages/Error"
 import reportWebVitals from "./reportWebVitals"
 import Header from "./components/Header"
@@ -20,9 +20,10 @@ ReactDOM.render(
       <Route path="/about">
         <About />
       </Route>
-      {/*<Route path="/houses*">
-        <Houses />
-      </Route>*/}
+      <Route
+        path="/house/:id"
+        render={(props) => <Houses {...props} />}
+      ></Route>
       <Route>
         <Error />
       </Route>
