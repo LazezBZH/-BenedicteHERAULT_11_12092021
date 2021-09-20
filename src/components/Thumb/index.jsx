@@ -1,9 +1,9 @@
-import { Component } from "react"
+import React from "react"
 import PropTypes from "prop-types"
 import { Link } from "react-router-dom"
 import "./Thumb.css"
 
-export default class Thumb extends Component {
+export default class Thumb extends React.Component {
   render() {
     const { title, src, location, id } = this.props
     return (

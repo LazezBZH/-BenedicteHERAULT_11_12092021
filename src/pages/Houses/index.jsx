@@ -1,35 +1,71 @@
 import React from "react"
-
 import "./Houses.css"
+import Carrousel from "../../components/Carrousel"
+import Infos from "../../components/Infos"
+import Error from "../Error"
 
 export default class Houses extends React.Component {
   constructor(props) {
     super(props)
+
     this.state = {
+      error: null,
+      isLoaded: false,
       datas: [],
     }
   }
 
-  componentDidMount() {
-    const { id } = this.props.match.params
-    fetch(`./datas.json`)
+  getData(url) {
+    fetch(url)
       .then((response) => response.json())
-      .then((jsonResponse) => {
-        this.setState({ datas: jsonResponse })
-      })
-      .then(console.log(id))
+      .then(
+        (jsonResponse) => {
+          const idInUrl = this.props.match.params.id
+          const itemToShow = jsonResponse.find((item) => item.id === idInUrl)
+
+          if (itemToShow) {
+            this.setState({
+              isLoaded: true,
+              datas: itemToShow,
+            })
+          }
+        },
+        (error) => {
+          this.setState({ error })
+        }
+      )
+  }
+
+  componentDidMount() {
+    this.getData("../datas.json")
   }
 
   render() {
-    const { datas } = this.state
-    const { cover, title, location } = datas
+    const { error, isLoaded } = this.state
 
-    return (
-      <div>
-        <img src={cover} alt={title} height={150} width={150} />
-        <h1>{title}</h1>
-        <span>{location}</span>
-      </div>
-    )
+    if (error) {
+      return (
+        <div>
+          <Error />
+        </div>
+      )
+    } else if (!isLoaded) {
+      return <div>Chargement en cours</div>
+    } else {
+      const { host, location, rating, tags, title } = this.state.datas
+
+      return (
+        <main className="Houses">
+          <Carrousel />
+          <Infos
+            location={location}
+            title={title}
+            tags={tags}
+            host={host}
+            rating={rating}
+          />
+        </main>
+      )
+    }
   }
 }

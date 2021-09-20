@@ -1,0 +1,39 @@
+.infos {
+  display: flex;
+  justify-content: space-between;
+}
+.houseInfos {
+  max-width: 55%;
+}
+.houseInfos h1 {
+  color: #ff6060;
+  font-size: 36px;
+  font-weight: 500;
+}
+.houseInfos p {
+  font-size: 18px;
+  font-weight: 500;
+}
+.tags {
+  display: flex;
+  color: white;
+  font-size: 14px;
+}
+.tag {
+  background-color: #ff6060;
+  padding: 0.2rem 1rem;
+  border-radius: 1rem;
+  margin-right: 1rem;
+}
+.hostAndRate {
+  display: flex;
+}
+.host {
+  display: flex;
+  color: #ff6060;
+  justify-content: right;
+}
+.host h2 {
+  font-size: 18px;
+  font-weight: 500;
+}

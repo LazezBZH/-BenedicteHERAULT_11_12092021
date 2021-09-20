@@ -10,7 +10,7 @@ export default class Galery extends React.Component {
   }
 
   componentDidMount() {
-    fetch("./datas.json")
+    fetch("datas.json")
       .then((response) => response.json())
       .then((jsonResponse) => {
         this.setState({

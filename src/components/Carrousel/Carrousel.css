@@ -1,0 +1,7 @@
+.carrousel {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  background-color: black;
+  margin-bottom: 3rem;
+}
