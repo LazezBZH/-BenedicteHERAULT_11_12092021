@@ -1,4 +1,5 @@
 import React from "react"
+import Ratings from "../Ratings"
 import "./Infos.css"
 
 export default class Infos extends React.Component {
@@ -19,14 +20,14 @@ export default class Infos extends React.Component {
         </div>
         <div className="hostAndRate">
           <div>
-            <div className="host">{hostNameSplit[0]} </div>
+            <div className="host host1">{hostNameSplit[0]} </div>
             <div className="host">{hostNameSplit[1]}</div>
           </div>
 
           <div className="hostImg">
             <img src={this.props.host.picture} alt={this.props.title} />
           </div>
-          <p>{this.props.rating} les étoiles viendront ne vous inquiétez pas</p>
+          <Ratings numberOfStars={parseInt(this.props.rating)} />
         </div>
       </section>
     )
