@@ -2,7 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import "./Collapse.css"
 
-class Collapse extends React.Component {
+export default class Collapse extends React.Component {
   constructor(props) {
     super(props)
     this.state = { isClosed: true }
@@ -24,17 +24,29 @@ class Collapse extends React.Component {
           <h2>{this.props.title}</h2>
           <i
             className={`fas  ${
-              this.state.isClosed ? "fa-chevron-up" : "fa-chevron-down"
+              this.state.isClosed ? "fa-chevron-down" : "fa-chevron-up"
             }`}
           ></i>
         </div>
-        <p
-          className={`collapse-content${
-            this.state.isClosed ? "_closed" : "_open"
-          }`}
-        >
-          {this.props.content}
-        </p>
+        {typeof this.props.content === "string" ? (
+          <p
+            className={`collapse-content${
+              this.state.isClosed ? "_closed" : "_open"
+            }`}
+          >
+            {this.props.content}
+          </p>
+        ) : (
+          <ul
+            className={`collapse-content${
+              this.state.isClosed ? "_closed" : "_open"
+            }`}
+          >
+            {this.props.content.map((item, index) => (
+              <li key={index}>{item}</li>
+            ))}
+          </ul>
+        )}
       </div>
     )
   }
@@ -47,5 +59,3 @@ Collapse.propTypes = {
     PropTypes.arrayOf(PropTypes.string),
   ]).isRequired,
 }
-
-export default Collapse

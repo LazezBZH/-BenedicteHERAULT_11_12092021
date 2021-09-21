@@ -3,6 +3,7 @@ import "./Houses.css"
 import Carrousel from "../../components/Carrousel"
 import Infos from "../../components/Infos"
 import Error from "../Error"
+import Collapse from "../../components/Collapse"
 
 export default class Houses extends React.Component {
   constructor(props) {
@@ -52,7 +53,8 @@ export default class Houses extends React.Component {
     } else if (!isLoaded) {
       return <div>Chargement en cours</div>
     } else {
-      const { host, location, rating, tags, title } = this.state.datas
+      const { host, location, rating, tags, title, description, equipments } =
+        this.state.datas
 
       return (
         <main className="Houses">
@@ -64,6 +66,14 @@ export default class Houses extends React.Component {
             host={host}
             rating={rating}
           />
+          <div className="houseCollapses">
+            <div className="houseDetails">
+              <Collapse title="Description" content={description} />
+            </div>
+            <div className="houseDetails">
+              <Collapse title="Équipements" content={equipments} />
+            </div>
+          </div>
         </main>
       )
     }

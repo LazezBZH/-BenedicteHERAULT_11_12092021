@@ -1,0 +1,8 @@
+.houseCollapses {
+  display: flex;
+  justify-content: space-between;
+}
+.houseDetails {
+  width: 48%;
+  margin-top: 1.5rem;
+}
