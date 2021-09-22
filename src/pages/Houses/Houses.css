@@ -6,3 +6,15 @@
   width: 48%;
   margin-top: 1.5rem;
 }
+
+.progress {
+  width: 65%;
+  height: 1rem;
+  margin: 10rem auto;
+  padding: 1rem 3rem;
+  background-color: #ff606018;
+  text-align: center;
+  color: #ff6060;
+  font-size: 1.2rem;
+  font-weight: bolder;
+}

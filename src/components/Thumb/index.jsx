@@ -8,15 +8,17 @@ export default class Thumb extends React.Component {
     const { title, src, location, id } = this.props
     return (
       <div className="thumb">
-        <Link to={`/house/${id}`} title={title} className="link-Thumb">
-          <img
-            className="cover-Thumb"
-            src={src}
-            alt={`${title} en ${location}`}
-          />
-          <div className="filter"></div>
-          <h2 className="title-Thumb">{title}</h2>
-        </Link>
+        <div className="hoverThumb">
+          <Link to={`/house/${id}`} title={title} className="link-Thumb">
+            <img
+              className="cover-Thumb"
+              src={src}
+              alt={`${title} en ${location}`}
+            />
+            <div className="filter"></div>
+          </Link>
+        </div>
+        <h2 className="title-Thumb">{title}</h2>
       </div>
     )
   }

@@ -11,25 +11,27 @@ import Header from "./components/Header"
 import Footer from "./components/Footer"
 
 ReactDOM.render(
-  <Router>
-    <Header />
-    <Switch>
-      <Route exact path="/">
-        <Home />
-      </Route>
-      <Route path="/about">
-        <About />
-      </Route>
-      <Route
-        path="/house/:id"
-        render={(props) => <Houses {...props} />}
-      ></Route>
-      <Route>
-        <Error />
-      </Route>
-    </Switch>
-    <Footer />
-  </Router>,
+  <React.StrictMode>
+    <Router>
+      <Header />
+      <Switch>
+        <Route exact path="/">
+          <Home />
+        </Route>
+        <Route path="/about">
+          <About />
+        </Route>
+        <Route
+          path="/house/:id"
+          render={(props) => <Houses {...props} />}
+        ></Route>
+        <Route>
+          <Error />
+        </Route>
+      </Switch>
+      <Footer />
+    </Router>
+  </React.StrictMode>,
   document.getElementById("root")
 )
 

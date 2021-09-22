@@ -1,4 +1,5 @@
 import React from "react"
+import { NavLink } from "react-router-dom"
 import "./Houses.css"
 import Carrousel from "../../components/Carrousel"
 import Infos from "../../components/Infos"
@@ -51,7 +52,14 @@ export default class Houses extends React.Component {
         </div>
       )
     } else if (!isLoaded) {
-      return <div>Chargement en cours</div>
+      return (
+        <NavLink to="/logement_non_trouvé">
+          <div className="progress">
+            Chargement en cours, si celui-ci dure trop longtemps cliquer pour
+            essayer à nouveau
+          </div>
+        </NavLink>
+      )
     } else {
       const {
         host,

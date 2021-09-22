@@ -39,6 +39,17 @@ export default class Carrousel extends React.Component {
   render() {
     return (
       <div className="carrousel">
+        <div className="image-zoom">
+          <img
+            className="img-Carrousel"
+            src={this.props.imgUrls[this.state.currentImageIndex]}
+            alt=""
+          />
+        </div>
+
+        <p className="compt">
+          {this.state.currentImageIndex + 1}/{this.props.imgUrls.length}
+        </p>
         {this.props.imgUrls.length > 1 ? (
           <div>
             <i
@@ -53,11 +64,6 @@ export default class Carrousel extends React.Component {
         ) : (
           ""
         )}
-        <img src={this.props.imgUrls[this.state.currentImageIndex]} alt="" />
-
-        <p className="compt">
-          {this.state.currentImageIndex + 1}/{this.props.imgUrls.length}
-        </p>
       </div>
     )
   }
