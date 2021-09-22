@@ -1,15 +1,67 @@
 import React from "react"
+import PropTypes from "prop-types"
 import "./Carrousel.css"
-import logo from "../../assets/logo-footer.svg"
 
 export default class Carrousel extends React.Component {
+  constructor(props) {
+    super(props)
+
+    this.state = {
+      currentImageIndex: 0,
+    }
+
+    this.nextSlide = this.nextSlide.bind(this)
+    this.previousSlide = this.previousSlide.bind(this)
+  }
+
+  previousSlide() {
+    const lastIndex = this.props.imgUrls.length - 1
+    const { currentImageIndex } = this.state
+    const shouldResetIndex = currentImageIndex === 0
+    const index = shouldResetIndex ? lastIndex : currentImageIndex - 1
+
+    this.setState({
+      currentImageIndex: index,
+    })
+  }
+
+  nextSlide() {
+    const lastIndex = this.props.imgUrls.length - 1
+    const { currentImageIndex } = this.state
+    const shouldResetIndex = currentImageIndex === lastIndex
+    const index = shouldResetIndex ? 0 : currentImageIndex + 1
+
+    this.setState({
+      currentImageIndex: index,
+    })
+  }
+
   render() {
     return (
       <div className="carrousel">
-        <img src={logo} alt="logo de Kasa" />
-        <p>ICI SERA LE CARROUSEL</p>
-        <img src={logo} alt="logo de Kasa" />
+        {this.props.imgUrls.length > 1 ? (
+          <div>
+            <i
+              className="fas fa-chevron-left"
+              onClick={() => this.previousSlide()}
+            ></i>
+            <i
+              className="fas fa-chevron-right"
+              onClick={() => this.nextSlide()}
+            ></i>
+          </div>
+        ) : (
+          ""
+        )}
+        <img src={this.props.imgUrls[this.state.currentImageIndex]} alt="" />
+
+        <p className="compt">
+          {this.state.currentImageIndex + 1}/{this.props.imgUrls.length}
+        </p>
       </div>
     )
   }
+}
+Carrousel.propTypes = {
+  imgUrls: PropTypes.arrayOf(PropTypes.string),
 }

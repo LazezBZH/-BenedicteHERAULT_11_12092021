@@ -53,12 +53,20 @@ export default class Houses extends React.Component {
     } else if (!isLoaded) {
       return <div>Chargement en cours</div>
     } else {
-      const { host, location, rating, tags, title, description, equipments } =
-        this.state.datas
+      const {
+        host,
+        location,
+        rating,
+        tags,
+        title,
+        description,
+        equipments,
+        pictures,
+      } = this.state.datas
 
       return (
         <main className="Houses">
-          <Carrousel />
+          <Carrousel imgUrls={pictures} />
           <Infos
             location={location}
             title={title}
