@@ -20,3 +20,12 @@ footer {
   color: white;
   padding-bottom: 2rem;
 }
+
+@media screen and (max-width: 426px) {
+  .logo-Footer img {
+    width: 5rem;
+  }
+  .copyright {
+    font-size: 1.2rem;
+  }
+}

@@ -4,3 +4,9 @@
   justify-content: right;
   margin-top: 1.5rem;
 }
+
+@media screen and (max-width: 550px) {
+  .stars img {
+    width: 1.2rem;
+  }
+}

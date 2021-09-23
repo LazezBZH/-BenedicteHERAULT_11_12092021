@@ -19,7 +19,7 @@ export default class Infos extends React.Component {
           </div>
         </div>
         <div className="hostAndRate">
-          <div>
+          <div className="host-name">
             <div className="host host1">{hostNameSplit[0]} </div>
             <div className="host">{hostNameSplit[1]}</div>
           </div>

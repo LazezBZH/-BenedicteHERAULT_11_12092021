@@ -9,3 +9,12 @@
   margin: auto;
   padding-top: 3rem;
 }
+
+@media screen and (max-width: 550px) {
+  .collapses-about {
+    width: 100%;
+  }
+  .collapses-about .collapse-title {
+    margin-top: 0.8rem;
+  }
+}

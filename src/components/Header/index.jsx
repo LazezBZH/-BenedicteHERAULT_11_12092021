@@ -10,11 +10,11 @@ class Header extends React.Component {
           <img className="logo-Header" src={logo} alt="logo de Kasa" />
         </Link>
         <nav className="nav-Header">
-          <NavLink className="links" activeClassName="selected" exact to="/">
+          <NavLink className="links1" activeClassName="selected" exact to="/">
             Accueil
           </NavLink>
 
-          <NavLink className="links" activeClassName="selected" to="/about">
+          <NavLink className="links2" activeClassName="selected" to="/about">
             À propos
           </NavLink>
         </nav>

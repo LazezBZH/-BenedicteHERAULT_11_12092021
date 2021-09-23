@@ -54,3 +54,67 @@
 .hostImg img {
   width: 5rem;
 }
+
+@media screen and (max-width: 890px) {
+  .infos {
+    display: block;
+  }
+  .houseInfos h1 {
+    font-size: 1.3rem;
+    font-weight: 500;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+  .houseInfos p {
+    font-size: 1.1rem;
+  }
+  .tags {
+    flex-wrap: wrap;
+  }
+  .tag {
+    font-size: 0.9rem;
+    padding: 0.2rem 0.5rem;
+    border-radius: 0.5rem;
+    margin-right: 0.4rem;
+    margin-bottom: 0.4rem;
+  }
+  .hostAndRate {
+    width: auto;
+    margin: 0 0 0 1rem;
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: nowrap;
+  }
+  .hostImg {
+    width: 3.5rem;
+    height: 3.5rem;
+    position: absolute;
+    right: 2rem;
+  }
+  .hostImg img {
+    width: 3.5rem;
+  }
+  .host {
+    font-size: 1rem;
+  }
+  .host-name {
+    position: absolute;
+    right: 5rem;
+  }
+}
+@media screen and (min-width: 550px) and (max-width: 890px) {
+  .hostImg {
+    width: 5rem;
+    height: 5rem;
+  }
+  .hostImg img {
+    width: 5rem;
+  }
+  .host {
+    font-size: 1.3rem;
+  }
+  .host-name {
+    position: absolute;
+    right: 7rem;
+  }
+}

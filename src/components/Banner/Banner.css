@@ -22,3 +22,24 @@
   position: absolute;
   top: 2.5rem;
 }
+@media screen and (max-width: 550px) {
+  .banner h1 {
+    width: 80vw;
+    font-size: 1.5rem;
+    text-align: left;
+    margin-left: 0.6rem;
+  }
+  .banner {
+    height: 8rem;
+    margin-bottom: 2rem;
+  }
+  .banner img {
+    height: 8rem;
+    border-radius: 1rem;
+  }
+}
+@media screen and (max-width: 850px) {
+  .banner {
+    margin-bottom: 2rem;
+  }
+}
