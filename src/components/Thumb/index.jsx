@@ -10,11 +10,9 @@ export default class Thumb extends React.Component {
       <div className="thumb">
         <div className="hoverThumb">
           <Link to={`/house/${id}`} title={title} className="link-Thumb">
-            <img
-              className="cover-Thumb"
-              src={src}
-              alt={`${title} en ${location}`}
-            />
+            <div className="cover-Thumb">
+              <img src={src} alt={`${title} en ${location}`} />
+            </div>
             <div className="filter"></div>
           </Link>
         </div>
